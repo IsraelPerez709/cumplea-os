@@ -1,0 +1,196 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#15254b 0%,#050816 35%,#000000 100%);
+
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#universe{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.contenido{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    color:white;
+
+    z-index:10;
+}
+
+#titulo{
+
+    font-size:70px;
+
+    text-shadow:
+    0 0 15px white,
+    0 0 30px cyan,
+    0 0 60px #00d9ff;
+}
+
+#mensaje{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    opacity:.9;
+}
+
+#btn{
+
+    margin-top:50px;
+
+    padding:18px 45px;
+
+    font-size:20px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:linear-gradient(45deg,#00c3ff,#6a00ff);
+
+    color:white;
+
+    transition:.4s;
+}
+
+#btn:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:0 0 30px cyan;
+
+}
+
+#titulo,
+#mensaje,
+#btn{
+
+    transition:1.5s;
+
+}
+
+
+/* ======================================
+FLASH
+====================================== */
+
+#flash{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:white;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    transition:opacity .6s;
+
+}
+
+/* ======================================
+SHAKE
+====================================== */
+
+.shake{
+
+    animation:shake .08s infinite;
+
+}
+
+@keyframes shake{
+
+    0%{
+
+        transform:translate(0px,0px);
+
+    }
+
+    25%{
+
+        transform:translate(2px,-2px);
+
+    }
+
+    50%{
+
+        transform:translate(-2px,2px);
+
+    }
+
+    75%{
+
+        transform:translate(2px,2px);
+
+    }
+
+    100%{
+
+        transform:translate(0px,0px);
+
+    }
+
+}
+
+#nombre{
+
+    font-size:60px;
+
+    color:white;
+
+    opacity:0;
+
+    transition:2s;
+
+    text-shadow:
+    0 0 20px cyan,
+    0 0 50px white;
+
+}
+
+#mensaje{
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    opacity:0;
+
+    transition:2s;
+
+}
